@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+             Starting with some basic selectors
+        </title>
+        <link rel="stylesheet" href="css/selectors.css">
+
+        <script src="F:\neel\jQuery\jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+
+        function fn1()
+        {
+            $("#d1").fadeToggle(2000);
+            $("div > p").fadeToggle(1000); // div element  is parent and p element is child so this will hide p element in the div tag
+            $("p:first").fadeToggle(1000); //this will hide first instance of p element
+            $(".c1:even").fadeToggle(1000); // this will hide the divs which holds the even index
+            $("li:even").fadeToggle(1000);  // this will hide the list items which holds the even index
+        }
+          
+        </script>
+
+    </head>
+    <body>
+      <h2 id="h2">Selectors</h2>
+      <p>Say hi to the selectors</p>
+
+      <div id="d1" class="c1">
+        <p>the simple paragraph</p>
+        <p>anothor simple paragraph</p>
+      </div>  
+
+      <div id="d2" class="c1">
+          <p>simple paragraph of d2</p>
+      </div>
+
+      <div id="d3" class="c1">
+        <p>simple paragraph of d3</p>
+      </div>
+
+      <div class="c1">
+          <ul>
+              <li>hi</li>
+              <li>how</li>
+              <li>are</li>
+              <li>you</li>
+          </ul>
+      </div>
+
+      <button onclick="fn1()">Click here</button>
+    </body>
+</html>
