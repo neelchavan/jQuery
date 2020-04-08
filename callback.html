@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Callback
+        </title>
+        <link rel="stylesheet" href="css/callback&chaining.css">
+    </head>
+    <body>
+        <h2 id="h2">Callback alert</h2>
+
+        <div id="d1" class="c1">
+          <p>the simple paragraph</p>
+          <p>anothor simple paragraph</p>
+        </div> 
+        <br><br>
+        <button id="btn">Click here</button>
+    </body>
+    <script src="F:\neel\jQuery\jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function (){
+        
+        $("#btn").click(function(){
+
+            $("#d1").slideToggle(2000, function(){  //at this line we have given callback to the alert
+                alert("callback done"); 
+            })
+        })
+    })
+    
+
+
+    </script>
+</html>
