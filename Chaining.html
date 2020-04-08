@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Chaining
+        </title>
+        <link rel="stylesheet" href="css/callback&chaining.css">
+    </head>
+    <body>
+        <h2 id="h2">Chaining</h2>
+
+        <div id="d1" class="c1">
+          <p>the simple paragraph</p>
+          <p>anothor simple paragraph</p>
+        </div> 
+        <br><br>
+        <button id="btn">Click here</button>
+    </body>
+    <script src="F:\neel\jQuery\jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function (){
+        
+        $("#btn").click(function(){
+
+            $("#d1").slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000); //applying multiple events in single line called chaining
+            })
+        })
+    
+    
+
+
+    </script>
+</html>
